@@ -1,0 +1,19 @@
+import java.util.*;
+
+class OFF7and10bit
+{
+    public static int OffBit(int iNo)
+    {
+         int mask = 0;
+        mask = ~((1<<6) | (1<<9));
+        return (iNo & mask);
+    }
+
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+        int no = sobj.nextInt();
+
+        System.out.println(OffBit(no));
+    }
+}
