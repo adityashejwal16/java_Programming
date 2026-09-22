@@ -3,32 +3,28 @@ import java.util.*;
 
 class File2
 {
-    public static void main(String A[]) throws Exception
+    public static void main(String A[]) throws IOException
     {
-        boolean bRet = false;
         String FileName = null;
-       
+
         Scanner sobj = new Scanner(System.in);
 
-        System.out.println("Enter The Name of file");
+        System.out.println("Enter The File Name :");
         FileName = sobj.nextLine();
 
-        File fobj = new File(FileName);
+        File fobj = new File(FileName); // Create File
 
-        FileReader frobj = new FileReader(FileName);
-        BufferedReader brobj = new BufferedReader(frobj);
+        boolean bRet = fobj.createNewFile();
 
-        String Line = null;
-
-        System.out.println("File Contain Are : ");
-
-        while((Line = brobj.readLine()) != null)
+        if(bRet == true)
         {
-            System.out.println(Line);
+            System.err.println("File Gets Created Successfully");
+        }
+        else
+        {
+            System.err.println("Unable To Create File");
         }
 
-        frobj.close();
-    
         sobj.close();
     }
 }
