@@ -1,26 +1,23 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 
 class File1
 {
-    public static void main(String A[])
+    public static void main(String A[]) throws IOException
     {
-        try
-        {
-            File fobj = new File("PPA.txt");
+        Scanner sobj = new Scanner(System.in);
 
-            if(fobj.createNewFile())
-            {
-                System.out.println("File Successfully Created");
-            }
-            else
-            {
-                System.out.println("File Already Exists");
-            }
-        }
-        catch(IOException e)
+        File fobj = new File("Addi.txt"); // Create File
+
+        boolean bRet = fobj.createNewFile();
+
+        if(bRet == true)
         {
-            System.out.println("Unable to Create File");
+            System.err.println("File Gets Created Successfully");
+        }
+        else
+        {
+            System.err.println("Unable To Create File");
         }
     }
 }
