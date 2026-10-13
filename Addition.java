@@ -3,9 +3,9 @@ class Addition
 {
     public static void main(String A[]) 
     {
-        int No1 = 10,  No2 = 52;
+        int iNo1 = 10,  iNo2 = 11;
 
-        int iRet = No1 + No2;
+        int iRet = iNo1 + iNo2;
 
         System.out.println("Addition is " + iRet);
     }
