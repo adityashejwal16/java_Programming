@@ -1,32 +1,36 @@
 import java.util.*;
 
+class Display
+{
+    void DisplayDigit(int iDigit)
+    {
+        int iNo = 0;
+
+        while(iDigit != 0)
+        {
+            iNo = iDigit % 10;
+            System.out.println(iNo);
+            iDigit = iDigit / 10;
+            
+            System.out.println(iDigit);
+        }
+    }
+
+}
 
 class Digits5
 {
     public static void main()
     {
-        int iNo = 0;
-        int iDigit = 0;
+        int iValue = 0;
+
+        Display dobj = new Display();
 
         Scanner sobj = new Scanner(System.in);
 
-        System.out.println("ENter The Number : ");
-        iNo = sobj.nextInt();
+        System.out.println("Enter the number : ");
+        iValue = sobj.nextInt();
 
-        System.out.println("-----------------------------------------------");
-        System.out.println("Orignal value of iNO is  : " + iNo);
-
-        while(iNo != 0)
-        {
-         System.out.println("-----------------------------------------------");
-        iDigit = iNo % 10;
-        System.out.println(iDigit);
-        iNo = iNo / 10;
-        System.out.println(iNo);
-        }
-
-        System.out.println("-----------------------------------------------");
-
-
+        dobj.DisplayDigit(iValue);
     } 
 }
