@@ -23,6 +23,6 @@ class Array23
             }
         }
 
-        System.out.println("Secound last Min : "+iSecoundMin);
+        System.out.println("Secound largest Min : "+iSecoundMin);
     }
 }
