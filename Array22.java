@@ -1,3 +1,11 @@
+/*
+     Java Constant	            Meaning
+     Integer.MIN_VALUE	      सर्वात लहान int Value
+     Integer.MAX_VALUE	      सर्वात मोठी int Value
+*/
+
+
+
 class Array22
 {
 public static void main(String A[])
